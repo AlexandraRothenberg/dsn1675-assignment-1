@@ -8,8 +8,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-    
-    background-color: #ccc;
+  background-color: white;
 
   font: normal 100%/1.5 sans-serif;
   -moz-text-size-adjust: 100%;
@@ -21,3 +20,136 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+body{
+    margin: 0;
+}
+
+header{ 
+    padding: 1em;
+}
+
+main{
+    padding: 1em;
+}
+
+.logo {
+    width:100px;
+    display:block;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav a {
+    display:block;
+    padding: .5em 1em;
+    color: darkblue;
+    text-decoration: none;
+    
+}
+.wrapper{
+    max-width: 38em;
+    margin:0 auto; /* pushes to center*/
+}
+
+@media only screen and (min-width: 25em) {
+    
+    img {
+    width: 100%
+}
+    
+    .nav {
+        text-align: center;
+    }
+    
+    .nav li{
+        display:inline-block;    
+    } 
+}
+
+@media only screen and (min-width: 38em) {
+    
+    html{
+        font-size: 110%;
+        line-height: 1.4;
+    }
+    
+    img{
+        width: 32em;
+    }
+    
+     .logo{
+        display:inline-block;
+        margin: 0 1em;
+        vertical-align: middle;
+        padding-bottom: 1em;
+    }
+     .title{
+        display:inline-block;
+    }
+    .nav {
+        margin-top: 1em;
+        font-size: 1.1rem;
+        display:inline-block;
+        vertical-align: middle;
+        padding-bottom: 1em;
+    }
+    .nav li{
+        display:inline-block;
+    }
+}
+
+
+@media only screen and (min-width: 60em) {
+    
+    html{
+        font-size: 120%;
+        line-height: 1.5;
+    }
+    
+    .logo{
+        display:block;
+        margin: 0 auto;
+    }
+    .title {
+        display:block;
+    }
+    
+    .nav {
+        margin-top: 1em;
+        font-size: 1.1rem;
+    }
+    
+}
+
+@media only screen and (min-width: 90em) {
+    
+    html{
+        font-size: 130%;
+        line-height: 1.6;
+    }
+}
+
+/*print always goes on bottom*/
+@media print{
+
+    nav{
+        display: none;
+    }
+    
+    main a::after {
+        content: " ( " attr(href) " )";
+        color: #999;
+    }
+}
+
